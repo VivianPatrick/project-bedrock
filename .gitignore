@@ -1,0 +1,14 @@
+# Terraform
+*.tfvars
+*.tfvars.json
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Lambda build
+lambda/*.zip
+
+# Secrets
+*.pem
+*.key
