@@ -18,8 +18,7 @@ output "vpc_id" {
   value       = module.vpc.vpc_id
 }
 
-# Uncomment after s3.tf is added
-# output "assets_bucket_name" {
-#   description = "S3 assets bucket name"
-#   value       = aws_s3_bucket.assets.bucket
-# }
+output "assets_bucket_name" {
+  description = "S3 assets bucket name"
+  value       = aws_s3_bucket.assets.bucket
+}
