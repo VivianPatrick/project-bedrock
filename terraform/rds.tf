@@ -56,7 +56,7 @@ resource "aws_db_instance" "mysql" {
   allocated_storage = 20
 
   db_name  = "catalog"
-  username = "admin"
+  username = "dbadmin"
   password = var.db_password
 
   db_subnet_group_name   = aws_db_subnet_group.rds.name
@@ -82,7 +82,7 @@ resource "aws_db_instance" "postgres" {
   allocated_storage = 20
 
   db_name  = "orders"
-  username = "admin"
+  username = "dbadmin"
   password = var.db_password
 
   db_subnet_group_name   = aws_db_subnet_group.rds.name
@@ -121,7 +121,7 @@ resource "aws_secretsmanager_secret_version" "db_creds" {
     pg_host        = aws_db_instance.postgres.address
     pg_port        = 5432
     pg_db          = "orders"
-    pg_username    = "admin"
+    pg_username    = "dbadmin"
     pg_password    = var.db_password
   })
 }
