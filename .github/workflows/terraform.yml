@@ -40,8 +40,9 @@ jobs:
           python-version: "3.12"
 
       - name: Package Lambda function
-        working-directory: ${{ github.workspace }}
-        run: zip lambda/handler.zip lambda/handler.py
+        run: |
+          cd ${{ github.workspace }}/lambda
+          zip handler.zip handler.py
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
