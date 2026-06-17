@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "project-bedrock-tfstate-4699"
+    bucket = "project-bedrock-tfstate-4699-v2"
     key    = "project-bedrock/terraform.tfstate"
     region = "us-east-1"
   }
