@@ -168,7 +168,7 @@ terraform destroy -var="student_id=4699" -var="db_password=YOUR_PASSWORD"
 
 **Why replace in-cluster databases with managed services?**  
 Running MySQL and PostgreSQL as pods means losing data if a pod crashes. 
-RDS provides automated backups, multi-AZ failover, and removes database 
+RDS provides automated backups, multi-AZ failover, and removes database  
 management from the application team entirely.
 
 **Why a single NAT Gateway?**  
